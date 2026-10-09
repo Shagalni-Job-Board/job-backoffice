@@ -42,7 +42,7 @@
                 <!-- Salary -->
                 <div class="mb-6">
                     <label for="salary" class="block text-sm font-semibold text-gray-900 mb-2">Expected Salary (USD)</label>
-                    <input type="number" name="salary" id="salary"
+                    <input type="number" name="salary" id="salary" min="0" step="1"
                         value="{{ old('salary', $vacancy->salary) }}"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition {{ $errors->has('salary') ? 'border-red-500 focus:ring-red-500' : '' }}">
                     @error('salary')

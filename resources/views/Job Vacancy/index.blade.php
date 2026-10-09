@@ -75,7 +75,7 @@
                                     {{ $vacancy->type }}
                                 </td>
                                 <td class="px-6 py-4 text-sm font-semibold text-green-600">
-                                    {{ $vacancy->salary }}
+                                    {{ number_format($vacancy->salary) }}
                                 </td>
                                 <td class="px-6 py-4 text-sm">
                                     <div class="flex gap-3">

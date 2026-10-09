@@ -25,7 +25,7 @@
                         </p>
                         <p class="text-gray-700">
                             <span class="font-semibold text-gray-900">Salary:</span>
-                            <span class="text-green-600 font-bold">{{ $vacancy->salary ?? '—' }}</span>
+                            <span class="text-green-600 font-bold">{{ $vacancy->salary === null ? '—' : number_format($vacancy->salary) }}</span>
                         </p>
                         <p class="text-gray-700">
                             <span class="font-semibold text-gray-900">Description:</span>

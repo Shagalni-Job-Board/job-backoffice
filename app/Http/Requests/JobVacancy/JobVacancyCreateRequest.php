@@ -26,7 +26,7 @@ class JobVacancyCreateRequest extends FormRequest
             'title' => 'required|string|max:255|unique:job_vacancies,title',
             'description' => 'required|string',
             'location' => 'required|string|max:255',
-            'salary' => 'required|numeric|min:0',
+            'salary' => 'required|integer|min:0',
             'type' => 'required|string|max:50',
             // relationships
             'categoryID' => 'required|exists:job_categories,id',
@@ -52,7 +52,7 @@ class JobVacancyCreateRequest extends FormRequest
             'location.string' => 'The job location must be a srting. ',
 
             'salary.required'=> 'The job salary field is required.',
-            'salary.numeric' => 'The job salary must be a number. ',
+            'salary.integer' => 'The job salary must be a whole number. ',
             'salary.min' => 'The job salary must be at least 0. ',
 
             'type.required'=> 'The job type field is required.',

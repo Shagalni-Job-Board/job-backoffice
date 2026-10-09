@@ -124,7 +124,7 @@
                                         </td>
                                         <td class="px-6 py-4 text-sm text-gray-700">{{ $job->type ?? '—' }}</td>
                                         <td class="px-6 py-4 text-sm text-gray-700">{{ $job->location ?? '—' }}</td>
-                                        <td class="px-6 py-4 text-sm font-semibold text-green-600">{{ $job->salary ?? '—' }}</td>
+                                        <td class="px-6 py-4 text-sm font-semibold text-green-600">{{ $job->salary === null ? '—' : number_format($job->salary) }}</td>
                                         <td class="px-6 py-4 text-sm">
                                             <div class="flex gap-3">
                                                 <a href="{{ route('job-vacancies.show', $job->id) }}" class="text-blue-600 hover:text-blue-800 font-semibold hover:underline">
